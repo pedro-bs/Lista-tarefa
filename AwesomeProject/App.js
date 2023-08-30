@@ -74,7 +74,7 @@ export default function App() {
               data={todos}
               keyExtractor={todo => todo.id}
               renderItem={({ item }) => (
-                <TodoItem item={item} onPress={pressHandler} />
+                <TodoItem item={item} />
               )}
             />
           </View>
@@ -90,5 +90,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#00ffff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 50,
   },
 });

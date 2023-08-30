@@ -11,10 +11,8 @@ export default function AddTodo({ submitHandler }) {
   return (
     <View>
       <TextInput
-        style={styles.input}
         placeholder="Nova tarefa..."
         onChangeText={changeHandler}
-
       />
       <Button
         title="Adicionar"

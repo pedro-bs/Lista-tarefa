@@ -6,9 +6,9 @@ import React from 'react';
 export default function TodoItem({ item, onPress }) {
   return (
     <TouchableOpacity onPress={() => onPress(item.id)}>
-      <View style={styles.item}>
+      <View>
         <MaterialIcons name="close" size={18}/>
-        <Text style={item.itemText}>{item.text}</Text>
+        <Text>{item.text}</Text>
       </View>
     </TouchableOpacity>
   );
