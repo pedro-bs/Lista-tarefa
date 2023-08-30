@@ -21,9 +21,6 @@ const styles = StyleSheet.create({
 });
 --------------------------------------------
 */
-/*
-
-*/
 import {
   Alert,
   FlatList,
@@ -40,23 +37,17 @@ import TodoItem from './components/TodoItem';
 
 export default function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: '1' },
-    { id: 2, text: '2' },
-    { id: 3, text: '3' },
-    { id: 4, text: '4' },
-    { id: 5, text: '5' },
+    { id: 1, text: '...' },
+    { id: 2, text: '...' },
+    { id: 3, text: '...' },
+    { id: 4, text: '...' },
+    { id: 5, text: '...' },
   ]);
-
-  const pressHandler = id => {
-    setTodos(prevTodos => {
-      return prevTodos.filter(todo => todo.id !== id);
-    });
-  };
-
+  
   const submitHandler = text => {
     if (text.length > 3) {
       setTodos(prevTodos => {
-        return [...prevTodos, { text, id: todos.length + 1 }]; // UUID
+        return [...prevTodos, { text, id: todos.length + 1 }];
       });
     } else {
       Alert.alert(
@@ -96,7 +87,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0ff',
+    backgroundColor: '#00ffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
